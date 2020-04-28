@@ -8,8 +8,11 @@ import tensorflow_hub as hub
 # --- Numpy and Pillow libraries
 import numpy as np
 import PIL.Image
+
 app = Flask(__name__)
 # --- style functions
+
+hub_module = hub.load('https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/1')
 def tensor_to_image(tensor):
     tensor = tensor*255
     tensor = np.array(tensor, dtype=np.uint8)
@@ -29,20 +32,21 @@ def load_img(path_to_img):
     img = tf.image.resize(img, new_shape)
     img = img[tf.newaxis, :]
     return img
-hub_module = hub.load('1')
+
 @app.route("/")
 def home():
     return "Hello World"
 @app.route("/style-image")
 def style():
-    content_path = 'YellowLabradorLooking_new.jpg'
-    style_path = 'kandinsky5.jpg'
+    content_path = 'static/YellowLabradorLooking_new.jpg'
+    style_path = 'static/kandinsky5.png'
     content_image = load_img(content_path)
     style_image = load_img(style_path)
     stylized_image = hub_module(tf.constant(content_image), tf.constant(style_image))[0]
     image = tensor_to_image(stylized_image)
     image.save("styled-image.jpg")
-    return "Done"
+    image_dog = os.path.join('static', 'styled-image.jpg')
+    return render_template("index.html",image_dog=image_dog)
+
 if __name__ == "__main__":
     app.run(debug = True, port=5001)
-
