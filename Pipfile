@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask = "*"
+pillow = "*"
+tensorflow = "*"
+tensorflow-hub = "*"
+jupyter = "*"
+keras = "*"
+numpy = "*"
+matplotlib = "*"
+
+[requires]
+python_version = "3.7"
