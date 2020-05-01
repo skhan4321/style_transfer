@@ -28,16 +28,16 @@ def upload_file():
             file.save(content_path)
             image_lists=[]
             for style_path in STYLES_PATHS:
-                image_process.predict(content_pat, style_path)
+                image_process.predict(content_path, style_path)
                 image_dog = image_process.predict(content_path, style_path)
                 image_lists.append(image_dog)
             return render_template("index.html",list = image_lists)
     return render_template("form.html")
     
-@app.route('/test')
-def test():
-    image_dog = "static/puppies1.JPG"
-    return render_template("index.html",image_dog=image_dog)
+# @app.route('/test')
+# def test():
+#     image_dog = "static/puppies1.JPG"
+#     return render_template("index.html",image_dog=image_dog)
 
 
 
