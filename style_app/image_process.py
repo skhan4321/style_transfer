@@ -1,3 +1,4 @@
+# --- Tensorflow libraries
 import os
 import tensorflow as tf
 import tensorflow_hub as hub
@@ -41,4 +42,6 @@ def predict(content_path, style_path):
     image = tensor_to_image(stylized_image)
     image.save(stylized_picture)
     return stylized_picture
+
+
 
