@@ -9,6 +9,9 @@
         of a branch of machine learning called convolutional neural networks.">
         <meta name="authors" content="Erin Bently, Claudia Ibarra, & Sana Khan">
     
+        <!-- Jinja2 reference to our css file -->
+        <!-- <link rel="stylesheet" href="{{ url_for('templates', filename='main.css') }}"> -->
+        <!-- Regular reference to css file -->
         <link rel="stylesheet" href="main.css">
     
       <body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; 
@@ -21,7 +24,7 @@
               <ul class="navbar-list">
                 <li class="navbar-item"><a class="navbar-link" href="/index/">Main</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="/research/">Research</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="/meet the girls/">Meet the Girls</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/meetthegirls/">Meet the Girls</a></li>
               </ul>
             </div>
           </nav>
@@ -40,12 +43,9 @@
       </header>
     
       <section class="post-content">
-        
-   <!-- if images is False/None/non-existent, then default to error message -->
-   <img src="{{ image_dog }}" alt="previous" title="Previous" border="0">
   
     <p>There are amazing apps out that transforms your photos into works of art using the styles of famous
-    artwork and motifs. The app performs this style transfer with the help of a branch of machine learning 
+    artwork and motifs. This style transfer with the help of a branch of machine learning 
     called <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">convolutional neural
     networks</a>.</p>
     
@@ -55,16 +55,13 @@
          <input type=submit value=Upload>
 
     </form>
-    
-    <p>This allows you to transfer the style of one image, like <a href="https://blantonmuseum.org/2013/09/coming-to-america-collectors-and-spread/">a cubist painting</a>, onto the content of
-    another, like a photo of your dog, to arrive at gorgeous results like these:</p>
    
     <h3 id="so-how-does-it-work">So how does it work?</h3>
     
     <p>It allows you to transfer the style of one image, like <a href="https://blantonmuseum.org/2013/09/coming-to-america-collectors-and-spread/">a cubist painting</a>, onto the content of
     another, like a photo of your dog, to arrive at gorgeous results like these:</p>
     
-    <p>----- ADD IMAGE EXAMPLES & CAPTIONS HERE (CODE CURRENTLY COMMENTED OUT) -----</p>
+    <p>-----(CODE CURRENTLY COMMENTED OUT) -----</p>
     <!-- <figure>
     <div class="">
       <div class="ADD HERE">
@@ -79,31 +76,18 @@
     <figcaption>ADD CAPTION HERE.</figcaption>
     </figure> -->
     
-    <p>Like many people, I found much of the output of this app very pleasing, and I got curious as to how it achieves its visual 
-        effect. How would we even begin to achieve something like this?</p>
-   
-    <p>The branch of machine learning we turn to solve the image 
-        classification problem is called <em>supervised learning</em>. In fact, when you hear most people talking about machine learning 
-        today (deep learning or otherwise), what they’re probably referring to is supervised learning, as it is the subset of machine 
-        learning that has demonstrated the most success in recent years. Supervised learning is now the classic procedure for <em>learning 
-        from data</em></p>
+    <p>See our <a href="/research">Research</a> page to learn more</p>
     
     <h3 id="selected-references-and-further-reading">References / Further Reading</h3>
-
-    <p>----- ADD LINKS HERE (CODE CURRENTLY COMMENTED OUT) -----</p>
-    <!-- <ol>
-    <li><a href="ADD LINK HERE">ADD TITLE HERE</a></li>
-    <li><a href="ADD LINK HERE">ADD TITLE HERE</a></li>
-    <li><a href="ADD LINK HERE">ADD TITLE HERE</a></li>
-    </ol> -->
-    
-
+    <p><a href="https://tensorspace.org/html/playground/index.html/">TensorSpace Playground</a> designed for presenting different pre-built models</p>
+    <p><a href="https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/generative/style_transfer.ipynb#scrollTo=lGUfttK9F8d5">Neural Style Transfer</a> tutorial uses deep learning to compose one image in the style of another image</p>
+    <p><a href="https://towardsdatascience.com/simple-introduction-to-convolutional-neural-networks-cdf8d3077bac">Towards Data Science</a> simple introduction to cnns... (c)onvolutional (n)eural (n)etworks</p>
     
         </main>
     
         <footer class="mainfooter">
           <div class="container">
-            <p>© Erin Bently, Claudia Ibarra, & Sana Khan UT-MCB-DATA-PT-11-2019-U-C  09-V-2020
+            <p>© Erin Bentley, Claudia Ibarra, & Sana Khan UT-MCB-DATA-PT-11-2019-U-C  09-V-2020
           </div>
         </footer>
         </body>
