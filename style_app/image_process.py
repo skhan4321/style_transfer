@@ -1,4 +1,3 @@
-# --- Tensorflow libraries
 import os
 import tensorflow as tf
 import tensorflow_hub as hub
@@ -6,6 +5,7 @@ import tensorflow_hub as hub
 import numpy as np
 import PIL.Image
 
+STYLIZED_DIR = os.path.join('static', 'images', 'final')
 hub_module = hub.load('1')
 
 def tensor_to_image(tensor):
@@ -30,15 +30,15 @@ def load_img(path_to_img):
     img = img[tf.newaxis, :]
     return img
 
-def predict(content_path,style_path):
+def predict(content_path, style_path):
+    filename = os.path.split(content_path)[-1]
+    stylized_picture = os.path.join(STYLIZED_DIR, filename)
+    print(stylized_picture)
+    
     content_image = load_img(content_path)
     style_image = load_img(style_path)
     stylized_image = hub_module(tf.constant(content_image), tf.constant(style_image))[0]
     image = tensor_to_image(stylized_image)
-    content_path_parts = list(os.path.split(content_path))
-    content_path_parts[0] = "static"
-    stylized_picture = os.path.join(*content_path_parts)
-    print(stylized_picture)
     image.save(stylized_picture)
     return stylized_picture
 

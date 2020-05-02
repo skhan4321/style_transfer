@@ -10,7 +10,7 @@
         <meta name="authors" content="Erin Bentley, Claudia Ibarra, & Sana Khan">
     
         <!-- Jinja2 reference to our css file -->
-        <!-- <link rel="stylesheet" href="{{ url_for('templates', filename='main.css') }}"> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
         <!-- Regular reference to css file -->
         <link rel="stylesheet" href="main.css">
     
@@ -62,19 +62,23 @@
     another, like a photo of your dog, to arrive at gorgeous results like these:</p>
     
     <p>-----(CODE CURRENTLY COMMENTED OUT) -----</p>
+    {%for image in list %}
+
+    {%endfor%}
+
     <!-- <figure>
     <div class="">
       <div class="ADD HERE">
-        <img class="img" src="/images/ADD LINK HERE.jpg" alt="ADD TITLE HERE ">
+        <img src="{{ list }}" alt="previous" title="Previous" border="0">
+        
+      </div>
+      <!-- <div class="ADD HERE"> -->
         <img class="img" src="/images/ADD LINK HERE.jpg" alt="ADD TITLE HERE">
       </div>
-      <div class="ADD HERE">
-        <img class="img" src="/images/ADD LINK HERE.jpg" alt="ADD TITLE HERE">
-      </div>
-    </div>
+    </div> -->
     
     <figcaption>ADD CAPTION HERE.</figcaption>
-    </figure> -->
+    </figure>
     
     <p>See our <a href="/research">Research</a> page to learn more</p>
     

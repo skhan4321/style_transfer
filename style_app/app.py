@@ -5,10 +5,15 @@ from flask import Flask, render_template, jsonify, request
 import image_process
 
 
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = os.path.join('static', 'images', 'uploads')
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
-STYLES_PATHS = ['static/kandinsky5.png']
+STYLES_DIR = os.path.join('static', 'images', 'styles')
+STYLES_PATHS = [
+    os.path.join(STYLES_DIR, 'kandinsky5.png'), 
+    os.path.join(STYLES_DIR, 'kandinsky5.png')
+]
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -26,13 +31,21 @@ def upload_file():
             # Save the file to the uploads folder
             content_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(content_path)
-            image_lists=[]
-            for style_path in STYLES_PATHS:
-                image_process.predict(content_path, style_path)
-                image_dog = image_process.predict(content_path, style_path)
-                image_lists.append(image_dog)
-            return render_template("index.html",list = image_lists)
-    return render_template("form.html")
+            # image_lists = []
+            # for style_path in STYLES_PATHS:
+            #     stylized_picture = image_process.predict(content_path, style_path)
+            #     image_lists.append(stylized_picture)
+            image_lists = [
+                {
+                    "content": content_path,
+                    "stylized": image_process.predict(content_path, style_path),
+                    "style": style_path
+                }
+                for style_path in STYLES_PATHS
+            ]
+            return render_template("index.html",images = image_lists)
+    # return render_template("form.html")
+    return render_template("index.html", images=[])
     
 # @app.route('/test')
 # def test():
