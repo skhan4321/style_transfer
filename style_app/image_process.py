@@ -33,7 +33,10 @@ def load_img(path_to_img):
 
 def predict(content_path, style_path):
     filename = os.path.split(content_path)[-1]
+    style_filename = os.path.split(style_path)[-1].split(".")[0]
+    filename = style_filename + "-" + filename
     stylized_picture = os.path.join(STYLIZED_DIR, filename)
+   
     print(stylized_picture)
     
     content_image = load_img(content_path)
@@ -42,6 +45,4 @@ def predict(content_path, style_path):
     image = tensor_to_image(stylized_image)
     image.save(stylized_picture)
     return stylized_picture
-
-
 
