@@ -8,9 +8,17 @@
         <meta name="description" content="Transforms your photos into works of art. The app performs this style transfer with the help 
         of a branch of machine learning called convolutional neural networks.">
         <meta name="authors" content="Erin Bentley, Claudia Ibarra, & Sana Khan">
+<<<<<<< HEAD
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- Jinja2 reference to our css file -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+=======
     
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
+>>>>>>> master
     
       <body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; 
       border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; 
@@ -48,21 +56,25 @@
     networks</a>.</p>
     
     <h2 id="become-an-artist">Become an Artist</h2>
+    <br>
     <form action="/" method=post enctype=multipart/form-data>
       <p><input type=file name=file>
          <input type=submit value=Upload>
 
     </form>
-   
+   <br>
     <h3 id="so-how-does-it-work">So how does it work?</h3>
     
     <p>It allows you to transfer the style of one image, like <a href="https://blantonmuseum.org/2013/09/coming-to-america-collectors-and-spread/">a cubist painting</a>, onto the content of
     another, like a photo of your dog, to arrive at gorgeous results like these:</p>
     
+<<<<<<< HEAD
+=======
     <p>-----(CODE CURRENTLY COMMENTED OUT) -----</p>
     {%for image in list %}
 
 
+>>>>>>> master
     <br>
     <div class="row">
       <div class="col-4"><h4>Content Image</h4></div>
@@ -82,6 +94,8 @@
           <img class="img-fluid" src="{{image.style}}" alt="">
         </div>
       </div>
+<<<<<<< HEAD
+=======
 
     {%endfor%}
 
@@ -100,6 +114,7 @@
     </figure>
     
     <p>See our <a href="/research">Research</a> page to learn more</p>
+>>>>>>> master
     
     <h3 id="selected-references-and-further-reading">References / Further Reading</h3>
     <p><a href="https://tensorspace.org/html/playground/index.html/">TensorSpace Playground</a> designed for presenting different pre-built models</p>
