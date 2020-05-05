@@ -64,23 +64,23 @@
     
     <br>
     <div class="row">
-      <div class="col-4"><h4>Content Image</h4></div>
-      <div class="col-4"><h4>Content Image</h4></div>
-      <div class="col-4"><h4>Content Image</h4></div>
+      
+      
     </div>
     {% for image in images %}
 
       <div class="row">
+        <div class="col-4"><h4>{{image.title}}</h4></div>
         <div class="col-4">
-          <img class="img-fluid" src="{{image.content}}" alt="">
+          <img class="img-fluid thumbnail" src="{{image.content}}" alt="">
         </div>
 
         <div class="col-4">
-          <img class="img-fluid" src="{{image.stylized}}" alt="">
+          <img class="img-fluid thumbnail" src="{{image.stylized}}" alt="">
         </div>
 
         <div class="col-4">
-          <img class="img-fluid" src="{{image.style}}" alt="">
+          <img class="img-fluid thumbnail" src="{{image.style}}" alt="">
         </div>
       </div>
 

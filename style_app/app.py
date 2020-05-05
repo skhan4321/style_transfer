@@ -10,8 +10,10 @@ ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 STYLES_DIR = os.path.join('static', 'images', 'styles')
 STYLES_PATHS = [
-    os.path.join(STYLES_DIR, 'kandinsky5.png'), 
-    os.path.join(STYLES_DIR, 'picasso.jpg')
+ 
+    os.path.join(STYLES_DIR, 'picasso.jpg'),
+    os.path.join(STYLES_DIR, 'Starry_Night.jpg'),
+    os.path.join(STYLES_DIR, 'Kandinsky.jpg')
 ]
 
 app = Flask(__name__)
@@ -33,21 +35,20 @@ def upload_file():
                 filename = str(x) + file.filename 
             content_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(content_path)
-            # image_lists = []
-            # for style_path in STYLES_PATHS:
-            #     stylized_picture = image_process.predict(content_path, style_path)
-            #     image_lists.append(stylized_picture)
+
             image_lists = [
                 {
                     "content": content_path,
                     "stylized": image_process.predict(content_path, style_path),
-                    "style": style_path
+                    "style": style_path,
+                    "title": filename
                 }
                 for style_path in STYLES_PATHS
             ]
             return render_template("index.html",images = image_lists)
-    # return render_template("form.html")
     return render_template("index.html", images=[])
+
+
 
 
 @app.route('/research/')
