@@ -8,11 +8,9 @@
         <meta name="description" content="Transforms your photos into works of art. The app performs this style transfer with the help 
         of a branch of machine learning called convolutional neural networks.">
         <meta name="authors" content="Erin Bentley, Claudia Ibarra, & Sana Khan">
-    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <!-- Jinja2 reference to our css file -->
-        <!-- <link rel="stylesheet" href="{{ url_for('templates', filename='main.css') }}"> -->
-        <!-- Regular reference to css file -->
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
     
       <body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; 
       border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; 
@@ -22,9 +20,9 @@
           <nav class="navbar">
             <div class="container">
               <ul class="navbar-list">
-                <li class="navbar-item"><a class="navbar-link" href="/index/">Main</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="/research/">Research</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="/meetthegirls/">Meet the Girls</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="index.html">Main</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="research.html">Research</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="meetthegirls.html">Meet the Girls</a></li>
               </ul>
             </div>
           </nav>
@@ -45,12 +43,77 @@
       <section class="post-content">
     
     <p>There are amazing apps out that transforms your photos into works of art using the styles of famous
-    artwork and motifs. The app performs this style transfer with the help of a branch of machine learning 
-    called <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">convolutional neural
-    networks</a>.</p>
+      artwork and motifs. This style transfer with the help of a branch of machine learning 
+      called <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">convolutional neural
+      networks</a>.</p>
     
     <h2 id="research">Meet The Girls</h2>
         
+    <!-- Bio section -->
+    <section class="bios">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+                <h4>Erin Bentley</h4>
+                <p>----------------------------------------------------------------------</p>
+            </div>
+            <a href="https://github.com/erinbentley" target="_blank">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <img class="card-img" src="{{url_for('static',filename='images/site/erin.jpeg')}}" alt="Erin Bentley">
+            </a>
+            </div>
+        </div>
+    </div> 
+      <br>
+      <hr>
+
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+                <h4>Claudia Ibarra</h4>
+                <p>----------------------------------------------------------------------</p>
+            </div>
+            <a href="https://github.com/cmibarra0816" target="_blank">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <img class="card-img" src="{{url_for('static',filename='images/site/claudia.jpeg')}}" alt="Claudia Ibarra">
+            </a>
+            </div>
+        </div>
+    </div> 
+      <br>
+      <hr>
+
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+                <h4>Sana Khan</h4>
+                <p>----------------------------------------------------------------------</p>
+            </div>
+            <a href="https://github.com/cmibarra0816" target="_blank">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <img class="card-img" src="{{url_for('static',filename='images/site/sana.jpeg')}}" alt="Sana Khan">
+            </a>
+            </div>
+        </div>
+    </div> 
+      <br>
+      <hr>
+
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+                <h4>Coco Puffs</h4>
+                <p>----------------------------------------------------------------------</p>
+            </div>
+            <a href="https://github.com/cmibarra0816" target="_blank">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <img class="card-img" src="{{url_for('static',filename='images/site/coco.jpg')}}" alt="Coco">
+            </a>
+            </div>
+        </div>
+    </div> 
+      <br>
+      <hr>
 
         </main>
     
