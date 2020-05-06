@@ -1,8 +1,0 @@
-flask
-Pillow
-tensorflow
-tensorflow_hub
-jupyter
-keras
-numpy
-matplotlib
