@@ -8,23 +8,9 @@
         <meta name="description" content="Transforms your photos into works of art. The app performs this style transfer with the help 
         of a branch of machine learning called convolutional neural networks.">
         <meta name="authors" content="Erin Bentley, Claudia Ibarra, & Sana Khan">
-<<<<<<< HEAD
-
-        <!-- Jinja2 reference to our css file -->
-        <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
-=======
-<<<<<<< HEAD
-        
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
         <!-- Jinja2 reference to our css file -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-=======
-    
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-
->>>>>>> master
->>>>>>> d56b38bf64dfbf0d19b7015b18bcde88e1268a68
     
       <body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; 
       border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; 
@@ -74,53 +60,25 @@
     <p>It allows you to transfer the style of one image, like <a href="https://blantonmuseum.org/2013/09/coming-to-america-collectors-and-spread/">a cubist painting</a>, onto the content of
     another, like a photo of your dog, to arrive at gorgeous results like these:</p>
     
-<<<<<<< HEAD
-=======
-    <p>-----(CODE CURRENTLY COMMENTED OUT) -----</p>
-    {%for image in list %}
-
-
->>>>>>> master
     <br>
     <div class="row">
-      <div class="col-4"><h4>Content Image</h4></div>
-      <div class="col-4"><h4>Content Image</h4></div>
-      <div class="col-4"><h4>Content Image</h4></div>
+      <div class="col-4"><h4>Artwork Image</h4></div>
+      <div class="col-4"><h4>Photo Image </h4></div>
+      <div class="col-4"><h4>Result Image</h4></div>
     </div>
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img class="img-fluid" src="{{url_for('static',filename='images/-----')}}" alt="Artwork">
+          <img class="img-fluid" src="{{url_for('static',filename='images/site/---')}}" alt="Artwork">
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img class="img-fluid" src="{{url_for('static',filename='images/-----')}}" alt="Photo">
+          <img class="img-fluid" src="{{url_for('static',filename='images/site/---')}}" alt="Photo">
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img class="img-fluid" src="{{url_for('static',filename='images/-----')}}" alt="Result">
+          <img class="img-fluid" src="{{url_for('static',filename='images/site/---')}}" alt="Result">
         </div>
       </div>
-<<<<<<< HEAD
-=======
-
-    {%endfor%}
-
-    <!-- <figure>
-    <div class="">
-      <div class="ADD HERE">
-        <img src="{{ list }}" alt="previous" title="Previous" border="0">
-        
-      </div>
-      <!-- <div class="ADD HERE"> -->
-        <img class="img" src="/images/ADD LINK HERE.jpg" alt="ADD TITLE HERE">
-      </div>
-    </div> -->
-    
-    <figcaption>ADD CAPTION HERE.</figcaption>
-    </figure>
-    
-    <p>See our <a href="/research">Research</a> page to learn more</p>
->>>>>>> master
     
     <h3 id="selected-references-and-further-reading">References / Further Reading</h3>
     <p><a href="https://tensorspace.org/html/playground/index.html/">TensorSpace Playground</a> designed for presenting different pre-built models</p>
