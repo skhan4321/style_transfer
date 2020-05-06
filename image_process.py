@@ -8,6 +8,7 @@ import PIL.Image
 
 STYLIZED_DIR = os.path.join('static', 'images', 'final')
 hub_module = hub.load('1')
+# hub_module = hub.load('1.tar.gz')
 
 def tensor_to_image(tensor):
     tensor = tensor*255
