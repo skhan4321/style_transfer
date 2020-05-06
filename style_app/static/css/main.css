@@ -27,6 +27,7 @@
     }
 }
 
+
 /* Navbar */
 .navbar {
     display: block;
@@ -79,6 +80,7 @@
     }
 }
 
+
 /* Post */
 .post-meta {
     display: block;
@@ -93,6 +95,7 @@
     display: inline-block;
     white-space: nowrap;
 }
+
 
 /* Fonts */
 @font-face {
@@ -161,6 +164,7 @@
     url('/fonts/Lora_700.ttf') format('truetype');
 }
 
+
 /* Base Styles */
 html {
     font-size: 62.5%;
@@ -173,6 +177,7 @@ body {
     color: var(--body-color);
     background-color: var(--body-background-color);
 }
+
 
 /* Typography */
 h1, h2, h3, h4 {
@@ -200,6 +205,7 @@ p {
     margin-top: 0;
 }
 
+
 /* Figures */
 figure {
     width: 100%;
@@ -225,6 +231,7 @@ figcaption {
     margin-top: .5em;
 }
 
+
 /* Links */
 a {
     color: var(--link-color);
@@ -234,6 +241,8 @@ a:hover {
     color: var(--link-hover-color);
     text-decoration: underline;
 }
+
+
 /* Footer */
 .mainfooter {
     font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
