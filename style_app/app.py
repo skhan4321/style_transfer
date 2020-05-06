@@ -51,12 +51,12 @@ def upload_file():
 
 
 
-@app.route('/research.html/')
+@app.route('/research.html')
 def research():
     return render_template("research.html")
 
 
-@app.route('/meetthegirls.html/')
+@app.route('/meetthegirls.html')
 def girls():
     return render_template("meetthegirls.html")
 
