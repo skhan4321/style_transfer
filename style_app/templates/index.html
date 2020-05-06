@@ -9,6 +9,7 @@
         of a branch of machine learning called convolutional neural networks.">
         <meta name="authors" content="Erin Bentley, Claudia Ibarra, & Sana Khan">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+       
         <!-- Jinja2 reference to our css file -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     
@@ -62,8 +63,8 @@
     
     <br>
     <div class="row">
-      <div class="col-4"><h4>Artwork Image</h4></div>
-      <div class="col-4"><h4>Photo Image </h4></div>
+      <div class="col-4"><h4>Photo Image</h4></div>
+      <div class="col-4"><h4>Artwork Image </h4></div>
       <div class="col-4"><h4>Result Image</h4></div>
     </div>
     {% for image in images %}
@@ -71,38 +72,17 @@
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <img class="img-fluid" src="{{image.content}}"  alt="Artwork">
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-​
+      <br>
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <img class="img-fluid" src="{{image.style}}" alt="Photo">
       </div>
-​
-=======
-
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <img class="img-fluid" src="{{image.style}}" alt="Photo">
-      </div>
-
->>>>>>> master
-=======
-
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <img class="img-fluid" src="{{image.style}}" alt="Photo">
-      </div>
-
->>>>>>> 81c94712fcb771b58b0de31cac16348b505e2c08
+      <br>
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <img class="img-fluid" src="{{image.stylized}}" alt="Result">
       </div>
     </div>
     {% endfor %}
-    
-    <h3 id="selected-references-and-further-reading">References / Further Reading</h3>
-    <p><a href="https://tensorspace.org/html/playground/index.html/">TensorSpace Playground</a> designed for presenting different pre-built models</p>
-    <p><a href="https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/generative/style_transfer.ipynb#scrollTo=lGUfttK9F8d5">Neural Style Transfer</a> tutorial uses deep learning to compose one image in the style of another image</p>
-    <p><a href="https://towardsdatascience.com/simple-introduction-to-convolutional-neural-networks-cdf8d3077bac">Towards Data Science</a> simple introduction to cnns... (c)onvolutional (n)eural (n)etworks</p>
-    
+
         </main>
     
         <footer class="mainfooter">
