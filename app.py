@@ -35,7 +35,9 @@ def upload_file():
                 filename = str(x) + file.filename 
             content_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(content_path)
-
+            # need to connect to floyd hub
+            
+            # save locally 
             image_lists = [
                 {
                     "content": content_path,
