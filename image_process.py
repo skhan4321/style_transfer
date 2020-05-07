@@ -7,7 +7,7 @@ import numpy as np
 import PIL.Image
 
 STYLIZED_DIR = os.path.join('static', 'images', 'final')
-hub_module = hub.load('1')
+hub_module = hub.load('https://styletransfer-196116601428-us-east-2.s3.us-east-2.amazonaws.com/1.tar.gz')
 # hub_module = hub.load('1.tar.gz')
 
 def tensor_to_image(tensor):
