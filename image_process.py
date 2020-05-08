@@ -2,17 +2,20 @@
 import os
 import tensorflow as tf
 import tensorflow_hub as hub
+
 # --- Numpy and Pillow libraries
 import numpy as np
 import PIL.Image
 
-STYLIZED_DIR = os.path.join('static', 'images', 'final')
-hub_module = hub.load('1')
+STYLIZED_DIR = os.path.join("static", "images", "final")
+hub_module = hub.load("1")
+# hub_module = hub.load('1.tar.gz')
+
 
 def tensor_to_image(tensor):
-    tensor = tensor*255
+    tensor = tensor * 255
     tensor = np.array(tensor, dtype=np.uint8)
-    if np.ndim(tensor)>3:
+    if np.ndim(tensor) > 3:
         assert tensor.shape[0] == 1
         tensor = tensor[0]
     return PIL.Image.fromarray(tensor)
@@ -31,18 +34,18 @@ def load_img(path_to_img):
     img = img[tf.newaxis, :]
     return img
 
+
 def predict(content_path, style_path):
     filename = os.path.split(content_path)[-1]
     style_filename = os.path.split(style_path)[-1].split(".")[0]
     filename = style_filename + "-" + filename
     stylized_picture = os.path.join(STYLIZED_DIR, filename)
-   
+
     print(stylized_picture)
-    
+
     content_image = load_img(content_path)
     style_image = load_img(style_path)
     stylized_image = hub_module(tf.constant(content_image), tf.constant(style_image))[0]
     image = tensor_to_image(stylized_image)
     image.save(stylized_picture)
     return stylized_picture
-
