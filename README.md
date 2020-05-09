@@ -3,10 +3,10 @@
 We used the model from https://www.tensorflow.org/tutorials/generative/style_transfer to do an exploration of Neural style transfer. Using a convolutional network, we are extracting pixels out of images and using them as nodes for machine learning. A node takes the input from the style guide image as a set of coefficients, that will alter the image output as it passes through matrices, with calculations that will sharpen or blur parts of the image or the colors therein. The result is any image that a user inputs can be quickly stylized through the model. <br>
 
 To run the app locally, clone the repository, install the requirements.txt file, activate the pipenv, and run app.py in Python.  <br>
-You do not need a local version, as this is deployed through FloydHub here: XX__URL__XX.  <br> <br>
+You do not need a local version, we can host an active session on ngrok or you can use the app that we deployed through Google Cloud Run here: XX__URL__XX.  <br> <br>
 As a user, you can use the form on the homepage to upload an image of anything you like, and see returned stylized images in various known styles.  <br>
-We started with the Kandinsky style as this was used in our model, but we also added styles such as Monet, Mucha, and Simpsons. <br>
-A really great thing about our app is that if you download the repo locally, you can swap the style for any that you want by adding other styles of image to the Styles folder.  <br>
+We started with the Kandinsky style as this was used in our model, but we also added styles such as Monet, and Picasso. <br>
+A fun thing about our app is that if you download the code locally, you can swap or add to the styles by simply adding other styles of image to the Styles folder.  <br>
 
 <h4>Requirements / Built With: </h4><br>
 flask <br>
@@ -41,6 +41,5 @@ See the License for the specific language governing permissions and
 limitations under the License. <br>
  <h4><br>
 Acknowledgments </h4><br>
-Manuel Lara - guidance and instruction through this project <br>
 Google Brain - created the model and documentation that was easily accessed on TensorFlow  <br>
  <br>
