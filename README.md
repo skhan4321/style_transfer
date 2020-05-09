@@ -17,6 +17,7 @@ jupyter <br>
 keras <br>
 numpy <br>
 matplotlib <br>
+gunicorn <br>
  <br>
 When interacting with our web app, the URL should direct you to a homepage that includes a form where you can input an image. When you upload and submit the image, your original image will be returned along with each of the styles that we have currently in our Styles folder. We included our research, and the research of those who created this model, and an about me page so you can get to know the team members. We have tested the local app in Postman and confirmed that the web app works by distributing the app to several test users.  <br>
  <br>
